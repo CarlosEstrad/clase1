@@ -1,0 +1,21 @@
+<h2 mat-dialog-title
+    class="title">{{title}}</h2>
+<mat-dialog-content>
+    <div id="clipboardContent">
+        <p *ngFor="let content of data">
+            <b>{{content.key}}:</b> {{content.value}}
+        </p>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button
+            color="primary"
+            matTooltip="Copiar al portapapeles"
+            (click)="copyToClipboard()">
+        <mat-icon>content_copy</mat-icon>
+    </button>
+    <button mat-button
+            color="primary"
+            class="spacing-letter"
+            mat-dialog-close>CERRAR</button>
+</mat-dialog-actions>
